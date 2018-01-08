@@ -18,7 +18,6 @@ yarn && npm run start
 * [Webpack](https://webpack.js.org/) - Module bundler
 * [Vue.js](https://vuejs.org/) - JavaScript Framework
 * [Vuex](https://vuex.vuejs.org/en/) - State management
-* [Vue.js](https://vuejs.org/) - JavaScript Framework
 * [Sass](http://sass-lang.com/) - CSS extension
 * [Buefy](https://buefy.github.io/#/) - Lightweight UI components for Vue.js based on Bulma
 * [Bulma](https://bulma.io/) - CSS framework 
