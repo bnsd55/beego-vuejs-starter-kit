@@ -1,0 +1,8 @@
+export const GET_ALL_USERS = 'getAllUsers'
+export const DELETE_USER = 'deleteUser'
+export const UPDATE_USER = 'updateUser'
+export const GET_USER_BY_ID = 'getUserByID'
+export const SERVER_ACTION_FAILED = 'serverActionFailed'
+export const SUBMIT_UPDATE_USER = 'submitUpdateUser'
+export const ADD_USER = 'addUser'
+export const INITIALIZE_TEMP = 'initializeTemp'
