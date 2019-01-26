@@ -35,7 +35,7 @@
     "vue-style-loader": "^3.0.3",
     "vue-template-compiler": "^2.5.9",
     "webpack": "^3.9.1",
-    "webpack-dev-server": "^2.9.5",
+    "webpack-dev-server": ">=3.1.11",
     "write-file-webpack-plugin": "^4.2.0"
   },
   "dependencies": {
