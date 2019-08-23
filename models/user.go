@@ -14,10 +14,10 @@ var users []*User
 func init() {
 	users = append(users, &User{
 		ID:        153634,
-		FirstName: "Hmid",
-		LastName:  "Hamidi",
+		FirstName: "Ben",
+		LastName:  "Shaharizad",
 		Email:     "Ben@gmail.com",
-		Gender:    "Female",
+		Gender:    "Male",
 	}, &User{
 		ID:        345352,
 		FirstName: "Omer",
@@ -33,9 +33,15 @@ func init() {
 	}, &User{
 		ID:        445733,
 		FirstName: "Maor",
-		LastName:  "Tambal",
+		LastName:  "Moyal",
 		Email:     "Maor@gmail.com",
 		Gender:    "Female",
+	}, &User{
+		ID:        224545,
+		FirstName: "Zur",
+		LastName:  "Doron",
+		Email:     "Zur@gmail.com",
+		Gender:    "Male",
 	}, &User{
 		ID:        224545,
 		FirstName: "Or",

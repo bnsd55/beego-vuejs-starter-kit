@@ -8,6 +8,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const notifier = require('node-notifier')
 const WriteFileWebPackPlugin = require('write-file-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const devServerHost = process.env.HOST || 'localhost'
 const devServerPort = process.env.PORT || '8000'
@@ -120,26 +121,11 @@ module.exports = {
         ]
     },
     plugins: [
+		new VueLoaderPlugin(),
         new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV) } }), // production | development
         new cleanDistFolderPlugin(['dist']),
         new webpack.NoEmitOnErrorsPlugin(),
         new ExtractTextPlugin({ filename: "[name].css" }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            minChunks: function (module) {
-                return (
-                    module.resource &&
-                    /\.js$/.test(module.resource) &&
-                    module.resource.indexOf(
-                        path.join(__dirname, './node_modules')
-                    ) === 0
-                )
-            }
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'manifest',
-            chunks: ['vendor']
-        }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'static/index.html'),
             filename: 'index.html',
@@ -150,7 +136,7 @@ module.exports = {
                 removeAttributeQuotes: false
             },
             chunks: ['vendor', 'manifest', 'main'],
-            chunksSortMode: 'dependency',
+            chunksSortMode: 'none',
             hash: true,
             showErrors: true
         }),
